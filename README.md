@@ -22,7 +22,7 @@ En fleksibel strømflyt-kort for Home Assistant basert på `power-flow-card-plus
 2. Legg til repoet:  
 ```
 
-[https://github.com/](https://github.com/)<ditt-brukernavn>/my-power-flow-card-pro
+https://github.com/hasimonsen/my-power-flow-card-pro
 
 ````
 med kategori **Lovelace**.
@@ -35,7 +35,7 @@ type: module
 
 ### Manuell
 
-1. Last ned siste release fra [Releases](https://github.com/<ditt-brukernavn>/my-power-flow-card-pro/releases).
+1. Last ned siste release fra [Releases](https://github.com/hasimonsen/my-power-flow-card-pro/releases).
 2. Pakk ut og legg `my-power-flow-card-pro.js` i `/config/www/`.
 3. Legg til ressurs i Home Assistant:
 
@@ -126,4 +126,4 @@ Bygget fil legges i `dist/my-power-flow-card-pro.js`.
 
 ## 📜 Lisens
 
-MIT © 2025 [Håkon Simonsen](https://github.com/<ditt-brukernavn>)
+MIT © 2025 [Håkon Simonsen](https://github.com/hasimonsen/)
