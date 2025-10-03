@@ -10,7 +10,7 @@ class MyPowerFlowCardPro extends HTMLElement {
     if (!this.content) {
       this.innerHTML = `
         <ha-card header="My Power Flow Card Pro">
-          <div id="content" style="padding: 16px; font-size:14px; line-height:1.6;">
+          <div id="content" style="padding:16px; font-size:14px; line-height:1.6;">
             <div id="grid"></div>
             <div id="home"></div>
             <div id="extra"></div>
@@ -30,19 +30,34 @@ class MyPowerFlowCardPro extends HTMLElement {
     const solar = cfg.entities.solar ? states[cfg.entities.solar]?.state || "—" : null;
     const battery = cfg.entities.battery ? states[cfg.entities.battery]?.state || "—" : null;
 
-    this.content.querySelector("#grid").innerHTML = `
-      ⚡ Grid: <b>${grid}</b> kW ${cap ? `• Kapasitetsledd: ${cap}` : ""}
-    `;
-    this.content.querySelector("#home").innerHTML = `
-      🏠 Home: <b>${home}</b> W ${supplier ? `• Supplier: ${supplier}` : ""}
-    `;
-    this.content.querySelector("#extra").innerHTML = `
-      ${solar ? `☀️ Solar: ${solar}` : ""} ${battery ? `• 🔋 Battery: ${battery}` : ""}
-    `;
+    this.content.querySelector("#grid").innerHTML =
+      `⚡ Grid: <b>${grid}</b> kW ${cap ? `• Kapasitetsledd: ${cap}` : ""}`;
+    this.content.querySelector("#home").innerHTML =
+      `🏠 Home: <b>${home}</b> W ${supplier ? `• Supplier: ${supplier}` : ""}`;
+    this.content.querySelector("#extra").innerHTML =
+      `${solar ? `☀️ Solar: ${solar}` : ""} ${battery ? `• 🔋 Battery: ${battery}` : ""}`;
   }
 
   getCardSize() {
     return 3;
+  }
+
+  // Valgfritt: gjør at kortet kan konfigureres via Lovelace UI
+  static getConfigElement() {
+    return document.createElement("my-power-flow-card-pro-editor");
+  }
+
+  static getStubConfig() {
+    return {
+      entities: {
+        grid: "sensor.grid_power",
+        home: "sensor.home_power",
+        capacity: "sensor.capacity_tariff",
+        supplier: "sensor.energy_supplier",
+        solar: "sensor.solar_production",
+        battery: "sensor.battery_storage"
+      }
+    };
   }
 }
 
