@@ -1,4 +1,4 @@
-```markdown
+
 # ⚡ My Power Flow Card Pro
 
 ![HACS Custom Card](https://img.shields.io/badge/HACS-Custom-orange.svg)  
@@ -127,5 +127,3 @@ Bygget fil legges i `dist/my-power-flow-card-pro.js`.
 ## 📜 Lisens
 
 MIT © 2025 [Håkon Simonsen](https://github.com/<ditt-brukernavn>)
-
-```
