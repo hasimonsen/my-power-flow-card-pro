@@ -1,0 +1,9 @@
+{
+  "name": "My Power Flow Card Pro",
+  "render_readme": true,
+  "filename": "my-power-flow-card-pro.js",
+  "content_in_root": false,
+  "hide_default_branch": true,
+  "homeassistant": "2023.0.0",
+  "domains": ["sensor", "switch"]
+}
