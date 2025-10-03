@@ -1,2 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ensure JavaScript, JSON, YAML, Markdown use LF
+*.js text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+
+# Keep images and binaries untouched
+*.png binary
+*.jpg binary
+*.svg binary
+*.zip binary
